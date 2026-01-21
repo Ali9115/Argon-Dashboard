@@ -1,0 +1,83 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  padding: 5px 0;
+  gap: 350px;
+  margin-bottom: 35px;
+}
+
+.breadcrumb-path {
+  margin: 0;
+  font-size: 16px;
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.breadcrumb-current {
+  margin: 6px 0 0 0;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-actions-section {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.search-wrapper {
+  background-color: #131c4a;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.icon-search {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  margin-left: 12px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.nav-user-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-signin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.control-icon {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.btn-action {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}

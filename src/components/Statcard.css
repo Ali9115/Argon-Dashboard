@@ -1,0 +1,84 @@
+.stat-card-box {
+  background: #121e47;
+  border-radius: 12px;
+  padding: 30px 25px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-title {
+  color: #a0aec0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.8px;
+}
+
+.stat-amount {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.stat-detail {
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+.text-success {
+  color: #48bb78;
+  font-weight: 700;
+}
+
+.text-danger {
+  color: #f56565;
+  font-weight: 700;
+}
+
+.stat-time {
+  color: #a0aec0;
+  margin-left: 5px;
+}
+
+.stat-icon-square {
+  width: 40px;
+  height: 40px;
+  background: #3182ce;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+}
+
+.stats-container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.single-card-row {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.single-card-row>div {
+  width: calc((100% - 50px) / 3);
+}

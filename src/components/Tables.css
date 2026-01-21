@@ -1,0 +1,89 @@
+.table-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.table-title {
+    color: white;
+    margin: 0;
+}
+
+.btn-see-all {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #a0aec0;
+}
+
+.custom-table-head {
+    background-color: #1c2754;
+    font-size: 12px;
+    text-align: left;
+}
+
+.custom-table th {
+    padding: 15px;
+}
+
+.table-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-cell {
+    padding: 15px;
+}
+
+.table-cell-bold {
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-track {
+    flex: 1;
+    height: 4px;
+    background-color: #2d3748;
+    border-radius: 2px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.tables-grid-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 1.2fr;
+  gap: 24px;
+  margin-top: 25px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.table-card {
+  background: #121e47;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
