@@ -35,8 +35,7 @@ body::-webkit-scrollbar {
 
 .main-content {
   flex: 1;
-  margin-left: 320px;
-  padding: 20px 40px 40px 30px; 
+  padding: 1.25rem 2.5rem 2.5rem 1.875rem; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -44,6 +43,7 @@ body::-webkit-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
   box-sizing: border-box;
+  transition: margin-left 0.3s ease;
 }
 
 .main-content::-webkit-scrollbar {
@@ -52,8 +52,35 @@ body::-webkit-scrollbar {
 
 .page-title-only {
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  padding: 10px 0;
-  margin-left: 5px;
+  padding: 0.625rem 0;
+  margin-left: 0.3125rem;
+}
+
+@media (min-width: 1025px) {
+  .main-content {
+    margin-left: 320px;
+  }
+  
+  .main-content.full-width {
+    margin-left: 320px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+  
+  .main-content.full-width {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
 }

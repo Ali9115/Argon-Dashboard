@@ -66,10 +66,45 @@ const ChartsRow: React.FC = () => {
       min: 0,
       max: 500,
       tickAmount: 5,
-      labels: { style: { colors: "#ffffff", fontSize: "12px" } },
+      labels: {
+        style: {
+          colors: "#ffffff",
+          fontSize: "12px",
+        },
+      },
     },
     tooltip: { enabled: false },
     legend: { show: false },
+    responsive: [
+      {
+        breakpoint: 1200,
+        options: {
+          xaxis: {
+            labels: { style: { colors: "#ffffff", fontSize: "10px" } },
+          },
+          yaxis: {
+            min: 0,
+            max: 500,
+            tickAmount: 5,
+            labels: { style: { colors: "#ffffff", fontSize: "10px" } },
+          },
+        },
+      },
+      {
+        breakpoint: 768,
+        options: {
+          xaxis: {
+            labels: { style: { colors: "#ffffff", fontSize: "9px" } },
+          },
+          yaxis: {
+            min: 0,
+            max: 500,
+            tickAmount: 5,
+            labels: { style: { colors: "#ffffff", fontSize: "9px" } },
+          },
+        },
+      },
+    ],
   };
 
   const perfSeries = [
@@ -108,14 +143,58 @@ const ChartsRow: React.FC = () => {
       axisBorder: { show: false },
       axisTicks: { show: false },
     },
-
     yaxis: {
       min: 0,
       max: 30,
       tickAmount: 3,
-      labels: { style: { colors: "#ffffff", fontSize: "12px" } },
+      labels: {
+        style: {
+          colors: "#ffffff",
+          fontSize: "12px",
+        },
+      },
     },
     tooltip: { enabled: false },
+    responsive: [
+      {
+        breakpoint: 1200,
+        options: {
+          plotOptions: {
+            bar: {
+              columnWidth: "30%",
+            },
+          },
+          xaxis: {
+            labels: { style: { colors: "#ffffff", fontSize: "10px" } },
+          },
+          yaxis: {
+            min: 0,
+            max: 30,
+            tickAmount: 3,
+            labels: { style: { colors: "#ffffff", fontSize: "10px" } },
+          },
+        },
+      },
+      {
+        breakpoint: 768,
+        options: {
+          plotOptions: {
+            bar: {
+              columnWidth: "40%",
+            },
+          },
+          xaxis: {
+            labels: { style: { colors: "#ffffff", fontSize: "9px" } },
+          },
+          yaxis: {
+            min: 0,
+            max: 30,
+            tickAmount: 3,
+            labels: { style: { colors: "#ffffff", fontSize: "9px" } },
+          },
+        },
+      },
+    ],
   };
 
   return (
@@ -133,6 +212,7 @@ const ChartsRow: React.FC = () => {
             series={salesSeries}
             type="area"
             height={300}
+            width="100%"
           />
         </div>
       </div>
@@ -150,6 +230,7 @@ const ChartsRow: React.FC = () => {
             series={perfSeries}
             type="bar"
             height={300}
+            width="100%"
           />
         </div>
       </div>

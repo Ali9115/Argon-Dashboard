@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
@@ -7,13 +7,38 @@ import "./index.css";
 
 function App() {
   const [activeItem, setActiveItem] = useState<string>("Dashboard");
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(innerWidth > 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (innerWidth > 1024) {
+        setSidebarOpen(true);
+      } else {
+        setSidebarOpen(false);
+      }
+    };
+
+    addEventListener("resize", handleResize);
+    return () => removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Router>
       <div className="app-layout">
-        <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
-        <main className="main-content">
-          {activeItem === "Dashboard" && <Navbar activeItem={activeItem} />}
+        <Sidebar 
+          activeItem={activeItem} 
+          setActiveItem={setActiveItem}
+          isOpen={sidebarOpen}
+          setIsOpen={setSidebarOpen}
+        />
+        <main className={`main-content ${!sidebarOpen ? "full-width" : ""}`}>
+          {activeItem === "Dashboard" && (
+            <Navbar 
+              activeItem={activeItem} 
+              sidebarOpen={sidebarOpen}
+              toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+            />
+          )}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route

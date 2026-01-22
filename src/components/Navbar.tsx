@@ -1,16 +1,32 @@
-import { FaSearch, FaUser, FaCog, FaBell } from "react-icons/fa";
+import {
+  FaSearch,
+  FaUser,
+  FaCog,
+  FaBell,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import "./Navbar.css";
 
 interface NavbarProps {
   activeItem: string;
+  sidebarOpen: boolean;
+  toggleSidebar: () => void;
 }
-const Navbar = ({ activeItem }: NavbarProps) => {
+
+const Navbar = ({ activeItem, sidebarOpen, toggleSidebar }: NavbarProps) => {
   return (
     <nav className="navbar-container">
       <div className="nav-section">
-        <p className="nav-path">Pages / {activeItem}</p>
-        <h6 className="nav-current">{activeItem}</h6>
+        <button className="hamburger-btn" onClick={toggleSidebar}>
+          {sidebarOpen ? <FaTimes /> : <FaBars />}
+        </button>
+        <div>
+          <p className="nav-path">Pages / {activeItem}</p>
+          <h6 className="nav-current">{activeItem}</h6>
+        </div>
       </div>
+
       <div className="nav-actions-section">
         <div className="search-wrapper">
           <FaSearch className="icon-search" />
