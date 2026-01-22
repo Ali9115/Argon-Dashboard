@@ -45,7 +45,6 @@
   color: #f56565;
   font-weight: 700;
 }
-
 .stat-time {
   color: #a0aec0;
   margin-left: 5px;
@@ -78,7 +77,6 @@
   justify-content: flex-start;
   width: 100%;
 }
-
 .single-card-row>div {
   width: calc((100% - 50px) / 3);
 }

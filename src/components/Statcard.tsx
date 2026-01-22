@@ -1,6 +1,5 @@
 import { type ReactNode } from "react";
-import "./StatCard.css";
-
+import "./Statcard.css";
 interface StatCardProps {
   title: string;
   amount: string;

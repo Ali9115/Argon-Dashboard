@@ -108,6 +108,7 @@ const ChartsRow: React.FC = () => {
       axisBorder: { show: false },
       axisTicks: { show: false },
     },
+
     yaxis: {
       min: 0,
       max: 30,
@@ -121,9 +122,7 @@ const ChartsRow: React.FC = () => {
     <div className="charts-grid-layout">
       <div className="chart-card-main">
         <div className="chart-header">
-          <h2 className="chart-title chart-title-main">
-            Sales overview
-          </h2>
+          <h2 className="chart-title chart-title-main">Sales overview</h2>
           <h6 className="chart-subtitle chart-subtitle-success">
             (+5) more <span className="chart-subtitle-secondary">in 2021</span>
           </h6>
@@ -143,9 +142,7 @@ const ChartsRow: React.FC = () => {
           <h6 className="chart-subtitle chart-subtitle-performance">
             PERFORMANCE
           </h6>
-          <h2 className="chart-title chart-title-secondary">
-            Total orders
-          </h2>
+          <h2 className="chart-title chart-title-secondary">Total orders</h2>
         </div>
         <div className="chart-container-wrapper">
           <ReactApexChart

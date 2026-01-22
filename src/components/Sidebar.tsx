@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import illustration from "../assets/documentation-illustration.png";
+import argonLogo from "../assets/argon-logo.svg";
+import chakraLogo from "../assets/chakra-logo.svg";
 import "./Sidebar.css";
 import {
   FaHome,
@@ -9,8 +12,6 @@ import {
   FaFileAlt,
   FaRocket,
 } from "react-icons/fa";
-import { SiLightning } from "react-icons/si";
-import { RiHexagonLine } from "react-icons/ri";
 
 interface SidebarProps {
   activeItem: string;
@@ -35,13 +36,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeItem, setActiveItem }) => {
     <div className="sidebar-box">
       <div className="logo-area">
         <div className="logo-content">
-          <span className="bold-text">
-            <RiHexagonLine /> argon
-          </span>
+          <div className="logo-item">
+            <img src={argonLogo} alt="argon" className="header-logo-svg" />
+          </div>
           <span className="divider-pipe">|</span>
-          <span className="light-text">
-            <SiLightning /> chakra
-          </span>
+
+          <div className="logo-item">
+            <img src={chakraLogo} alt="chakra" className="header-logo-svg" />
+          </div>
         </div>
         <hr className="logo-hr" />
       </div>
@@ -81,6 +83,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeItem, setActiveItem }) => {
             </div>
           </Link>
         ))}
+      </div>
+      <div className="sidebar-footer">
+        <img src={illustration} alt="docs" className="help-img" />
+        <h5 className="help-title">Need help?</h5>
+        <p className="help-desc">Please check our docs</p>
+        <button className="btn-common btn-blue">DOCUMENTATION</button>
+        <button className="btn-common btn-dark">UPGRADE TO PRO</button>
       </div>
     </div>
   );

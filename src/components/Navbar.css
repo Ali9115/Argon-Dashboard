@@ -2,20 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   padding: 5px 0;
   gap: 350px;
   margin-bottom: 35px;
 }
 
-.breadcrumb-path {
+.nav-path {
   margin: 0;
   font-size: 16px;
   color: whitesmoke;
   font-weight: 600;
 }
 
-.breadcrumb-current {
+.nav-current {
   margin: 6px 0 0 0;
   font-size: 20px;
   color: #ffffff;
